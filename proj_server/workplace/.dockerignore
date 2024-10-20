@@ -1,0 +1,10 @@
+# Ignore the virtual environment directory
+.venv
+
+# Optionally ignore other unnecessary files or directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3

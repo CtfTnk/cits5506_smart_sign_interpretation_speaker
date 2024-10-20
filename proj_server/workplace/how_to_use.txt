@@ -1,0 +1,5 @@
+docker build -t asl_model_api .
+
+docker run -d -p 8080:8080 --name my_fastapi_container asl_model_api
+
+docker stop my_fastapi_container

@@ -1,0 +1,15 @@
+# enable service
+
+sudo systemctl enable my_python_script.service
+
+# execute service
+sudo systemctl start my_python_script.service
+
+# check state
+sudo systemctl status my_python_script.service
+
+# stop service
+sudo systemctl stop my_python_script.service
+
+# disable service
+sudo systemctl disable my_python_script.service

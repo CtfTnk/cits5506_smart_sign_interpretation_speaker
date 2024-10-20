@@ -1,0 +1,36 @@
+Server:
+
+FastAPI is used as a framework to provide gesture landmark analysis. Visit http://20.5.25.179:8080/docs for the JSON request format. The JSON data mainly consists of two dictionaries:
+
+handedness: "Left" or "Right"
+landmarks: a list of 21 x, y, z coordinates based on Google Mediapipe's hand model.
+Example:
+
+[
+  {
+    "handedness": "string",
+    "landmarks": [
+      {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      ...
+    ]
+  }
+]
+The server returns results with a confidence greater than 70%, otherwise, it returns "Uncertain".
+
+
+Client:
+
+Four buttons are defined:
+
+Pin 18 (Red): Take a photo, perform recognition, and add to the recognised text.
+Pin 23 (Gray): Add a space.
+Pin 24 (Black): Delete one character.
+Pin 25 (Green): Convert to speech, play, and clear recognized text.
+
+OLED Screen - 3.3V, GND, GPIO 2, GPIO 3 
+
+The screen supports displaying up to 3 lines of 16 characters of recognized text. If the text exceeds this limit, only the last fitting part is displayed. The bottom line displays the execution command and status.
